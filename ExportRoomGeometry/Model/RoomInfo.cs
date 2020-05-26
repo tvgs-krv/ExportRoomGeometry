@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.DB.Architecture;
 
-namespace ExportRoomGeometry
+namespace ExportRoomGeometry.Model
 {
     public class RoomInfo
     {
@@ -18,8 +14,8 @@ namespace ExportRoomGeometry
         public XYZ RoomLocation { get; set; }
         public XYZ RoomStartPoint { get; set; }
         public XYZ RoomEndPoint { get; set; }
+        public XYZ RoomAlongPoint { get; set; }
+        public bool IsArc { get; set; }
         public List<RoomInfo> RoomBoundarySegment { get; set; } = new List<RoomInfo>();
-        
-
     }
 }
